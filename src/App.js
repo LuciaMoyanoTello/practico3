@@ -18,8 +18,8 @@ function App() {
           <li>Ensayar la escena de la película</li>
           <li>Mejorar la tecnología del espectro</li>
         </ul>
+        <Car />
       </>
-      <Car />
       </header>
     </div>
   );
