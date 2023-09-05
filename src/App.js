@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Car from './componentes/Car';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <li>Mejorar la tecnología del espectro</li>
         </ul>
       </>
+      <Car />
       </header>
     </div>
   );
