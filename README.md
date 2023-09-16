@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Piedra, Papel o tijera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_En esta página se juega piedra, papel o tijera al mejor de 5, o también se gana si tiene ya sea la computadora o el usuario 3 victorias._
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+### Pre-requisitos 📋
 
-### `npm start`
+_Se instalo React y la libreria styled-components_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalación 🔧
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_Para instalar React y subirlo a GitHub hay que seguir estos pasos_
+```
+1. crear una carpeta nueva (sin mayusculas) 
+2. abrila desde el vsc
+3. desde la terminal npx create-react app .
+4. vamos a la cuenta de github y creamos un nuevo repositorio
+5. copiamos esto (lo vamos a usar mas adelante):
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/PONE-TU-USUARIO/NOMBRE-REPOSITORIO.git
+    git push -u origin main
+6. si te creo una carpeta .git eliminala
+7. git init
+8. git status para asegurarte de haber creado la nueva carpeta .git
+9. git add .
+10. git status
+11. git config user.email "pone tu email aca"
+12. git config user.name "pone tu usuario de github aca"
+13. pegar los 4 comandos que guardamos en el punto 5.
+14. npm install gh-pages --save-dev
+15. modificar el package.json antes del "name" en la primera linea de codigo pegar el link del la page
+"homepage": "https://PONE-TU-USUARIO.github.io/NOMBRE-REPOSITORIO/",
+16. En la parte del scripts pegar 2 comandos:
+despues del "star" y antes del "build" copiar estos scripts:
+"predeploy":"npm run build",
+"deploy":"gh-pages -d build",
+17. git add .
+18. git commit -m "pagina deplay"
+19. git push
+20. npm run deploy
+21. github --> setting --> pages: branch: gh-pages (save)
+```
 
-### `npm test`
+_Para instalar libreria_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install styled-components
+```
 
-### `npm run build`
+## Ejecutando las pruebas ⚙️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_1ra prueba_
+No aparecía para que el jugador ingrese un nombre
+Solución: setNombreJugador(event.target.value) para que tome el nombre del jugador
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_2da prueba_
+Los resultados aparecían con alert
+Solución: crear una const llamada winnerMessage y pasarle los mensajes dependiendo quien gane.
+Al último poner setWinner(`${winnerMessage}`); para que mostrara el mensaje en pantalla
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_3ra prueba_
+Las imágenes de piedra, papel o tijera eran muy grandes y no podía solucionarlo con el styled.img
+Solución: Dentro del boton de cada imágen agregar img
 
-### `npm run eject`
+_4ta prueba_
+La imágen desaparecía usando la mismo nombre que era StyledImagen para los tres botones
+Solución: Crear con el mismo código 3 botones diferentes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+_Muchas pruebas más para solucionar la vista del usuario_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Construido con 🛠️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [ChatGPT](https://chat.openai.com/)
+* [React](https://react.dev/) 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ con ❤️ por [LuciaMoyanoTello](https://github.com/LuciaMoyanoTello) 😊
